@@ -1,0 +1,291 @@
+/* Common CSS Start */
+:root {
+    --primary-color: cyan;
+    --secondary-color: rgb(2, 2, 49);
+    --tertiary-color: rgb(90, 90, 221);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common CSS End */
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .25rem;
+}
+
+main h1 {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 1rem auto;
+    font-size: 2.5rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Date & Audio Part Start */
+.top-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.date-box {
+    padding: .5rem;
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.date-box h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.date-box span {
+    color: #fff;
+    font-weight: 300;
+}
+
+#volumeBtn {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding: .5rem;
+    font-size: 1rem;
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+#unMute {
+    display: none;
+}
+
+/* Date & Audio Part End */
+
+#clockBox {
+    display: grid;
+    padding: 3rem .5rem;
+    place-items: center;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform-origin: center;
+    border: 8px solid var(--tertiary-color);
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.clock::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 2px 2px 5px 0 #bbb, inset -2px -2px 5px 0 #bbb;
+    z-index: -1;
+}
+
+/* .clock::after is added for shadow & to make a little Beautiful */
+
+.clock::before {
+    content: "";
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.813);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+/* .clock::before - it is the center point */
+
+/* Clocks Hand(hr,min,sec) Start */
+.clock span[id] {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    width: 5px;
+    height: 15px;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.clock span#hours {
+    height: 2rem;
+    width: .35rem;
+    background-color: gray;
+    z-index: 1;
+}
+
+
+.clock span#minutes {
+    height: 2.75rem;
+    width: .25rem;
+    background-color: purple;
+    z-index: 2;
+}
+
+.clock span#seconds {
+    height: 3.5rem;
+    width: .15rem;
+    background-color: blue;
+    z-index: 3;
+}
+
+/* Clocks Hand(hr,min,sec) End */
+
+
+/* Clocks Number Start */
+#clockBox .clock>span:not([id]) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#clockBox span:nth-child(1) {
+    transform: rotate(30deg);
+}
+
+#clockBox span:nth-child(1) span {
+    display: inline-block;
+    transform: rotate(-30deg);
+}
+
+#clockBox span:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+#clockBox span:nth-child(2) span {
+    display: inline-block;
+    transform: rotate(-60deg);
+}
+
+#clockBox span:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+#clockBox span:nth-child(3) span {
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+#clockBox span:nth-child(4) {
+    transform: rotate(120deg);
+}
+
+#clockBox span:nth-child(4) span {
+    display: inline-block;
+    transform: rotate(-120deg);
+}
+
+#clockBox span:nth-child(5) {
+    transform: rotate(150deg);
+}
+
+#clockBox span:nth-child(5) span {
+    display: inline-block;
+    transform: rotate(-150deg);
+}
+
+#clockBox span:nth-child(6) {
+    transform: rotate(180deg);
+}
+
+#clockBox span:nth-child(6) span {
+    display: inline-block;
+    transform: rotate(-180deg);
+}
+
+#clockBox span:nth-child(7) {
+    transform: rotate(210deg);
+}
+
+#clockBox span:nth-child(7) span {
+    display: inline-block;
+    transform: rotate(-210deg);
+}
+
+#clockBox span:nth-child(8) {
+    transform: rotate(240deg);
+}
+
+#clockBox span:nth-child(8) span {
+    display: inline-block;
+    transform: rotate(-240deg);
+}
+
+#clockBox span:nth-child(9) {
+    transform: rotate(270deg);
+}
+
+#clockBox span:nth-child(9) span {
+    display: inline-block;
+    transform: rotate(-270deg);
+}
+
+#clockBox span:nth-child(10) {
+    transform: rotate(300deg);
+}
+
+#clockBox span:nth-child(10) span {
+    display: inline-block;
+    transform: rotate(-300deg);
+}
+
+#clockBox span:nth-child(11) {
+    transform: rotate(330deg);
+}
+
+#clockBox span:nth-child(11) span {
+    display: inline-block;
+    transform: rotate(-330deg);
+}
+
+#clockBox span:nth-child(12) {
+    transform: rotate(360deg);
+}
+
+#clockBox span:nth-child(12) span {
+    transform: rotate(-360deg);
+}
+
+#clockBox span span {
+    display: inline-block;
+    padding: .2rem;
+    text-shadow: 0 0 1px black;
+}
+
+/* Clocks Number End */
