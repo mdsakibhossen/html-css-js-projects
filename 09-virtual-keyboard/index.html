@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Virtual KeyBoard</title>
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 
+    Shift-> data-key
+    Without Shift -> data-key-2
+    -->
+    <div class="container">
+        <h1 class="heading">Virtual KeyBoard</h1>
+        <!-- -----Start Display----- -->
+        <div class="display">
+            <span class="textBox">
+                <pre class="text"></pre>
+            </span>
+        </div>
+        <!-- -----End Display----- -->
+        <!-- -----Start KeyBoard----- -->
+        <div class="keyboard">
+            <div class="row row-1">
+                <div class="key" data-key="~" data-key2="`" style="font-size: 1rem;"><span
+                        style="margin-top: 5px;">`</span> <span>~</span></div>
+                <div class="key" data-key="!" data-key2="1"><span>1</span><span>!</span></div>
+                <div class="key" data-key="@" data-key2="2"><span>2</span><span>@</span></div>
+                <div class="key" data-key="#" data-key2="3"><span>3</span><span>#</span></div>
+                <div class="key" data-key="$" data-key2="4"><span>4</span><span>$</span></div>
+                <div class="key" data-key="%" data-key2="5"><span>5</span><span>%</span></div>
+                <div class="key" data-key="^" data-key2="6"><span>6</span><span>^</span></div>
+                <div class="key" data-key="&" data-key2="7"><span>7</span><span>&</span></div>
+                <div class="key" data-key="*" data-key2="8"><span>8</span><span>*</span></div>
+                <div class="key" data-key="(" data-key2="9"><span>9</span><span>(</span></div>
+                <div class="key" data-key=")" data-key2="0"><span>0</span><span>)</span></div>
+                <div class="key" data-key="_" data-key2="-"><span>&minus;</span><span>_</span></div>
+                <div class="key" data-key="+" data-key2="="><span>&equals;</span><span>&plus;</span></div>
+                <div class="key" data-key="back">&larr;</div>
+                <!-- <div class="key" data-key="back"><i class="fa-solid fa-arrow-left-long"></i></div> -->
+            </div>
+            <div class="row row-2">
+                <div class="key" data-key="tab">&#11134;</div>
+                <div class="key" data-key="Q">Q</div>
+                <div class="key" data-key="W">W</div>
+                <div class="key" data-key="E">E</div>
+                <div class="key" data-key="R">R</div>
+                <div class="key" data-key="T">T</div>
+                <div class="key" data-key="Y">Y</div>
+                <div class="key" data-key="U">U</div>
+                <div class="key" data-key="I">I</div>
+                <div class="key" data-key="O">O</div>
+                <div class="key" data-key="P">P</div>
+                <div class="key" data-key="{" data-key2="["><span>[</span><span>{</span></div>
+                <div class="key" data-key="}" data-key2="]"><span>]</span><span>}</span></div>
+                <div class="key" data-key="enter">&#9166;</div>
+            </div>
+            <div class="row row-3">
+                <div class="key" data-key="caps">&#10829;</div>
+                <div class="key" data-key="A">A</div>
+                <div class="key" data-key="S">S</div>
+                <div class="key" data-key="D">D</div>
+                <div class="key" data-key="F">F</div>
+                <div class="key" data-key="G">G</div>
+                <div class="key" data-key="H">H</div>
+                <div class="key" data-key="J">J</div>
+                <div class="key" data-key="K">K</div>
+                <div class="key" data-key="L">L</div>
+                <div class="key" data-key=":" data-key2=";"><span>;</span><span>:</span></div>
+                <div class="key" data-key='"' data-key2="'" style="font-size: 1rem;"><span
+                        style="margin-top: 5px;">'</span><span>"</span></div>
+                <div class="key" data-key="|" data-key2="\"><span>\</span><span>|</span></div>
+            </div>
+            <div class="row row-4">
+                <div class="key" data-shift="left" data-key="shift">&#9231;</div>
+                <div class="key" data-key="Z">Z</div>
+                <div class="key" data-key="X">X</div>
+                <div class="key" data-key="C">C</div>
+                <div class="key" data-key="V">V</div>
+                <div class="key" data-key="B">B</div>
+                <div class="key" data-key="N">N</div>
+                <div class="key" data-key="M">M</div>
+                <div class="key" data-key="lt" data-key2=","><span>,</span><span>&lt;</span></div>
+                <div class="key" data-key="gt" data-key2="."><span>.</span><span>&gt;</span></div>
+                <div class="key" data-key="?" data-key2="/"><span>/</span><span>?</span></div>
+                <div class="key" data-shift="right" data-key="shift">&#9231;</div>
+            </div>
+            <div class="row row-5">
+                <div class="key space-bar" data-key=" ">SPACE</div>
+            </div>
+        </div>
+        <!-- -----End KeyBoard----- -->
+    </div>
+
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
