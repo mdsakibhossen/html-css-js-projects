@@ -48,6 +48,8 @@ main {
 .card .buttons {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card button {
