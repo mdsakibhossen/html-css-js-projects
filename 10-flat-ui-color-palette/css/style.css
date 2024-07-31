@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0 #ddd;
+    padding: 1rem;
+    display: flex;
+    gap: .75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #130f40;
+}
+
+header h1 {
+    font-weight: 500;
+    color: transparent;
+    background: linear-gradient(to right bottom, #e67e22, #8e44ad, #f1c40f, #3498db);
+    background-clip: text;
+    text-align: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ddd;
+}
+
+#colorPalette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-auto-rows: 10rem;
+}
+
+.color-box {
+    cursor: pointer;
+    position: relative;
+}
+
+.copy-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0 0 3px 0 #ddddddb4;
+    border: 2px solid #dddddd97;
+    padding: .6rem 2.5rem;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.color-box:hover .copy-text-box {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.color-name-box {
+    position: absolute;
+    bottom: .5rem;
+    right: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    color: #fff;
+    letter-spacing: 2px;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+#comment {
+    background-color: #ffffff34;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    /* transition: all .3s ease; */
+    /* Main Comment: Transition is needed when going, thats why transition is not used here, it has been used in js(when it will go). */
+}
+
+#hexColorCode {
+    font-size: 1.5rem;
+    /* transition: all .3s ease; */
+    /* See Main Comment */
+}
