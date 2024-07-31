@@ -5,6 +5,16 @@ let isCaps = false;
 let isShift = false;
 let shiftValue = 0;
 
+// Create an Audio element
+const audio = new Audio("./media/audio/a.mp3");
+
+// Function to play the key press sound
+const playAudio = () => {
+    audio.currentTime = 0;
+    audio.play();
+}
+
+
 // Show Letter On Display
 const writeText = (keyValue) => {
     if (isShift || isCaps) {
@@ -82,7 +92,7 @@ for (let btn of buttons) {
 
 
         writeText(keyValue); // Calling to show keyValue On Display
-
+        playAudio(); // Playing Sound
         // Shift Button Color Reset
         if (btn.dataset.key !== "shift") {
             isShift = false;
