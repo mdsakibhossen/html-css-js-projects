@@ -1,0 +1,138 @@
+:root {
+    --container-width: 500px;
+    --c1: #BA4949;
+    --c2: #38858A;
+    --c3: #397097;
+    --c4: rgba(0, 0, 0, 0.3);
+    --c5: #ffffff23;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Barlow', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    border: none;
+    outline: none;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--c1);
+    transition: all .5s ease;
+}
+
+.container {
+    max-width: var(--container-width);
+    width: 95%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--c5);
+    box-shadow: 0 0 3px 0 var(--c4);
+    border-radius: .3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.card .buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.card button {
+    background-color: transparent;
+    padding: .35rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.card button.active {
+    background-color: var(--c4);
+}
+
+.card #timer {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.card #startBtn {
+    background-color: #fff;
+    padding: .8rem 3.5rem;
+    font-size: 1.5rem;
+    color: var(--c1);
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 1px 5px var(--c4);
+}
+
+.taskBox {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: #fff;
+}
+
+.taskBox input {
+    padding: .5rem;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.taskBox input::placeholder {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.taskBox .tasks {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.taskBox .tasks .task {
+    padding: .8rem 1rem;
+    background-color: #fffffff4;
+    color: #000000ea;
+    border-radius: .3rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.form-check-input {
+    border: none;
+    outline: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+    font-size: 1.15rem;
+}
+
+.taskBox #addTaskBtn {
+    padding: .8rem 0;
+    background-color: var(--c4);
+    color: #ffffffc2;
+    border-radius: .3rem;
+    border: 2px dashed #ddddddb3;
+    font-size: 1rem;
+}
